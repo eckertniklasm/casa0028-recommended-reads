@@ -13,5 +13,5 @@ export default defineConfig({
     tailwindcss(),
   ],
   base: '/casa0028-recommended-reads/',
-  homepage: 'https://ddunc23.github.io/casa0028-recommended-reads/'
+  homepage: 'https://ddunc23.github.io/casa0028-recommended-reads'
 })
