@@ -9,11 +9,9 @@ function App() {
   const [isModalOpen, setIsModalOpen] = useState(false)
 
   return (
-    <div className="flex flex-col h-screen bg-gray-50">
+    <div className="mx-auto max-w-screen-xl bg-gray-50 min-h-screen">
       <TitleBar title="Recommended Reading" />
-      <div className="flex-1">
-        <MapDisplay longitude={-0.137310} latitude={51.521699} />
-      </div>
+      <MapDisplay longitude={-0.137310} latitude={51.521699} />
       {isModalOpen ? <PlaqueModal /> : null}
   </div>
   )

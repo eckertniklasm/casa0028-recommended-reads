@@ -9,7 +9,7 @@ function MapDisplay(props) {
         latitude: props.latitude || 37.8,
         zoom: props.zoom || 10
       }}
-      style={{width: '100%', height: '100%'}}
+      style={{width: 600, height: 400}}
       mapStyle="https://basemaps.cartocdn.com/gl/positron-gl-style/style.json"
     />
   );
