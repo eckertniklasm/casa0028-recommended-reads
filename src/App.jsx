@@ -11,10 +11,8 @@ function App() {
   return (
     <div className="mx-auto max-w-screen-xl h-screen bg-gray-50 flex flex-col overflow-hidden">
       <TitleBar title="Recommended Reading" />
-      <div className="flex-1">
-        <MapDisplay longitude={-0.137310} latitude={51.521699} />
-      </div>
-      {isModalOpen ? <PlaqueModal /> : null}
+      <MapDisplay longitude={-0.137310} latitude={51.521699} />
+      {isModalOpen ? <PlaqueModal setIsModalOpen={setIsModalOpen} /> : null}
   </div>
   )
 }
