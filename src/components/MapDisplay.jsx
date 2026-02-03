@@ -48,15 +48,21 @@ function MapDisplay(props) {
             latitude={selectedPlaque.geometry.coordinates[1]}
             onClose={() => setSelectedPlaque(null)}
         >
-            <div>
-                <h2 className="text-xl font-semibold mb-2">{selectedPlaque.lead_subject_name}</h2>
-                <p className="text-xs text-blue-500 my-2"><a href={`https://openplaques.org/plaques/${selectedPlaque.id1}`}>OpenPlaques</a></p>
-                <p className="text-xs text-blue-500 my-2"><a href={selectedPlaque.lead_subject_wikipedia}>Wikipedia</a></p>
-                <button 
-                    className={"rounded-l-sm border border-gray-200 px-3 py-2 font-medium text-gray-700 transition-colors hover:bg-gray-50 hover:text-gray-900 focus:z-10 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-white focus:outline-none disabled:pointer-events-auto disabled:opacity-50"}
-                    onClick={() => console.log('Fetch recommended reading for', selectedPlaque.lead_subject_name)}
-                >Recommended Reading</button>
-            </div>        
+            <div style={{borderRadius: '16px', padding: '4px', backgroundColor: '#ffffff', paddingTop: '28px'}}>
+                <h2 className="text-xl font-semibold mb-2 bg-white px-2 py-1 rounded" style={{marginTop: '-24px', display: 'inline-block', position: 'relative', zIndex: '10'}}>{selectedPlaque.properties.lead_subject_name}</h2>
+                <div style={{border: '4px solid #007cbf', padding: '12px', borderRadius: '12px'}}>
+                    <p className="text-xs text-gray-600 mb-2">{selectedPlaque.properties.address}</p>
+                    <p className="text-xs text-blue-500 my-2"><a href={`https://openplaques.org/plaques/${selectedPlaque.properties.id1}`}>OpenPlaques</a></p>
+                    <p className="text-xs text-blue-500 my-2"><a href={selectedPlaque.properties.lead_subject_wikipedia}>Wikipedia</a></p>
+                    </div>
+                <div className="mt-4 flex" style={{borderRadius: '12px'}}>
+                    <button 
+                        className={"w-full rounded-l-sm border border-gray-200 px-3 py-2 font-medium text-gray-700 transition-colors hover:bg-gray-50 hover:text-gray-900 focus:z-10 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-white focus:outline-none disabled:pointer-events-auto disabled:opacity-50"}
+                        onClick={() => console.log('Fetch recommended reading for', selectedPlaque.properties.lead_subject_name)}
+                    >Recommended Reading</button>
+                
+                </div>
+            </div>
     </Popup>
 )}
     </Map>

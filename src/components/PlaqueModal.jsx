@@ -4,7 +4,7 @@ function PlaqueModal(props) {
     }
     return (
         <div className="fixed inset-0 z-50 grid place-content-center bg-black/50 p-4" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-            <div className="w-full max-w-md rounded-lg bg-white p-6 shadow-lg">
+            <div className="w-full max-w-md rounded-lg bg-white p-6 shadow-lg" style={{border: '4px solid #007cbf', boxShadow: '0 0 0 4px #ffffff, 0 4px 6px rgba(0, 0, 0, 0.1)'}}>
                 <div className="flex items-start justify-between">
                 <h2 id="modalTitle" className="text-xl font-bold text-gray-900 sm:text-2xl">Modal Title</h2>
 
